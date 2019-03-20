@@ -1,5 +1,7 @@
 # can-wrapper-component
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/canjs/can-wrapper-component.svg)](https://greenkeeper.io/)
+
 This makes creating wrapper like components much easier, so you can forward bindings down to specific child of the parent component.
 
 Example:
