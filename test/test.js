@@ -24,7 +24,7 @@ QUnit.test("can-wrapper-component pass attrs down to nested child", function () 
 	fixture.appendChild(template);
 
 	// Initial value was set on the input
-	QUnit.equal(document.querySelector('input').value, "initial");
+	assert.equal(document.querySelector('input').value, "initial");
 });
 
 QUnit.test("can-wrapper-component split attrs between parent component and child component", function () {
@@ -53,9 +53,9 @@ QUnit.test("can-wrapper-component split attrs between parent component and child
 	fixture.appendChild(template);
 
 	// Input has a value
-	QUnit.equal(document.querySelector('input').value, "something special");
+	assert.equal(document.querySelector('input').value, "something special");
 	// Label has text
-	QUnit.equal(document.querySelector('label').innerText, "My Input");
+	assert.equal(document.querySelector('label').innerText, "My Input");
 });
 
 QUnit.test("can-wrapper-component bindings work", function () {
@@ -88,14 +88,14 @@ QUnit.test("can-wrapper-component bindings work", function () {
 	var input = document.querySelector('input');
 
 	// Input has a value
-	QUnit.equal(input.value, "something special");
+	assert.equal(input.value, "something special");
 	// Label has text
-	QUnit.equal(document.querySelector('label').innerText, "Name:");
+	assert.equal(document.querySelector('label').innerText, "Name:");
 
 	// Change the input
 	input.value = "updated value";
 	domEvents.dispatch(input, "change");
 
 	// Input has changed
-	QUnit.equal(inputVM.get('input'), "updated value");
+	assert.equal(inputVM.get('input'), "updated value");
 });
